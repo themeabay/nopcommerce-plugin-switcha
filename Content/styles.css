@@ -1,0 +1,121 @@
+﻿.theme-switcha {
+  position: relative;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-switcha__selector {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #000;
+  cursor: pointer;
+}
+
+  .theme-switcha__selector svg {
+    width: 11px;
+    height: auto;
+    margin-left: 4px;
+  }
+
+  .theme-switcha__selector:hover .theme-switcha__theme::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  .theme-switcha__selector:hover .theme-switcha__themes {
+    display: flex;
+  }
+
+.theme-switcha__theme {
+  position: relative;
+  letter-spacing: 1.25px;
+}
+
+  .theme-switcha__theme::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: #000;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity .3s ease 0s,transform .3s ease 0s;
+  }
+
+.theme-switcha__themes {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 16px 0;
+  background: #000;
+  color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  opacity: 1;
+  transition: display .35s;
+  z-index: 99999;
+}
+
+.theme-switcha-card {
+  max-width: 140px;
+  margin: 10px;
+}
+
+  .theme-switcha-card a {
+    display: block;
+    color: #fff;
+  }
+
+  .theme-switcha-card.active .icon-check-svg {
+    display: inline-block;
+  }
+
+  .theme-switcha-card a:hover .theme-switcha-card__image img {
+    opacity: .85;
+  }
+
+  .theme-switcha-card a:hover .theme-switcha-card__title {
+    text-decoration: underline;
+  }
+
+@media (min-width: 768px) {
+  .theme-switcha-card {
+    max-width: 240px;
+  }
+}
+
+.theme-switcha-card__image {
+  position: relative;
+  display: block;
+  margin-bottom: 22px;
+}
+
+  .theme-switcha-card__image img {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity .25s;
+  }
+
+.theme-switcha-card__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.theme-switcha-card .icon-check-svg {
+  display: none;
+  fill: #fff;
+}
