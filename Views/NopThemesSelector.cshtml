@@ -1,7 +1,10 @@
 ﻿@using Nop.Web.Framework.UI
 @model IList<Themeabay.Nop.Plugin.Switcha.Models.ThemeModel>
 @inject Nop.Core.IWebHelper WebHelper
-@inject INopHtmlHelper NopHtml
+#if (NET6_0)
+    @inject INopHtmlHelper NopHtml
+#else
+    @inject IHtmlHelper NopHtml
 
 @{
     var workingTheme = Model.Where(k => k.IsSelected).First();

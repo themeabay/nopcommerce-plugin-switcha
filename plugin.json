@@ -6,6 +6,6 @@
   "SupportedVersions": [ "4.40","4.50" ],
   "Author": "Themeabay.com",
   "DisplayOrder": 1,
-  "FileName": "Themeabay.Nop.Plugins.Switcha.dll",
+  "FileName": "Themeabay.Nop.Plugin.Switcha.dll",
   "Description": "Allows users easy to test and develop themes while visitors continue to use your default nopCommerce theme."
 }

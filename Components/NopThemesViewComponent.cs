@@ -56,7 +56,7 @@ namespace Themeabay.Nop.Plugin.Switcha.Components
                 var theme = model.Where(k => k.SystemName == _storeInformationSettings.DefaultStoreTheme).First();
                 theme.IsSelected = true;
             }
-            return View("~/Plugins/Themeabay.Nop.Plugin.Switcha/Views/NopThemesSelector.cshtml", model);
+            return View("~/Plugins/Themeabay.Switcha/Views/NopThemesSelector.cshtml", model);
         }
     }
 }
